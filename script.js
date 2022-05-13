@@ -73,6 +73,16 @@ Object.entries(obj).forEach(
 );
 console.log(newArr4);
 
+// compare two JSON objects have same properties without order
+
+var obj1 = { name: "Person 1", age: 5 };
+var obj2 = { age: 5, name: "Person 1" };
+
+var jobj1 = JSON.stringify(obj1);
+var jobj2 = JSON.stringify(obj2);
+
+console.log(_.isEqual(jobj1, jobj2));
+
 
 const sampleUserData = [
     {
@@ -168,39 +178,39 @@ console.log(userBranch);
 // Filtering multiple objects values to an array based on particular key.
 let tempUserDepart2 = [];
 Object.values(sampleUserData).forEach(
-    function( key) {
+    function (key) {
         tempUserDepart2.push(key.depart2);
     }
 )
-const UserDepart2= [...new Set(tempUserDepart2)];
+const UserDepart2 = [...new Set(tempUserDepart2)];
 console.log(UserDepart2);
 
 // Filtering multiple objects values to an array based on particular key.
 let tempUserDepartment = [];
 Object.values(sampleUserData).forEach(
-    function( key) {
+    function (key) {
         tempUserDepartment.push(key.department);
     }
 )
-const UserDepartment= [...new Set(tempUserDepartment)];
+const UserDepartment = [...new Set(tempUserDepartment)];
 console.log(UserDepartment);
 
 // Filtering multiple objects values to an array based on particular key.
 let tempUserDesignation = [];
 Object.values(sampleUserData).forEach(
-    function( key) {
+    function (key) {
         tempUserDesignation.push(key.designation);
     }
 )
-const UserDesignation= [...new Set(tempUserDesignation)];
+const UserDesignation = [...new Set(tempUserDesignation)];
 console.log(UserDesignation);
 
 // Filtering multiple objects values to an array based on particular key.
 let tempUserRole = [];
 Object.values(sampleUserData).forEach(
-    function( key) {
+    function (key) {
         tempUserRole.push(key.roleName);
     }
 )
-const UserRole= [...new Set(tempUserRole)];
+const UserRole = [...new Set(tempUserRole)];
 console.log(UserRole);
